@@ -1,4 +1,5 @@
-public class Syrup extends Drink {
+public class Syrup extends DrinkDecorator {
+  
   public Syrup (Drink drink) {
     this.drink = drink;
   }

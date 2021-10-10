@@ -3,16 +3,20 @@ public class Main {
   public static void main(String[] args) {
   
     Drink drink = new Americano();
-    System.out.printIn(drink.getName()); //Americano
-    System.out.printIn(drink.cost()); //2000
+    System.out.println(drink.getName()); //americano
+    System.out.println(drink.cost()); //2000
 
-  
+    //shot 추가
     drink = new Shot(drink);
-    drink = new Syrup(drink);
 
-    System.out.printIn(drink.getName());
-    System.out.printIn(drink.cost());
-
-
+    System.out.println(drink.getName()); //shot americano
+    System.out.println(drink.cost()); //2200
+  
+    //syrup 추가
+    drink = new Syrup(drink); //shot을 가지고 있는 drink
+    
+    System.out.println(drink.getName()); //syrup shot americano
+    System.out.println(drink.cost()); //2300
   }
+
 }
